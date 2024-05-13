@@ -10,7 +10,7 @@ const winPatterns =[
 const reset =() => {
     turn0 = true;
     enableBoxes();
-    msg.innerText = " ji ";
+    msg.innerText = " ";
 }
 boxes.forEach((box) =>{
     box.addEventListener("click", () =>{
