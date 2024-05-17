@@ -14,7 +14,6 @@ const reset =() => {
 }
 boxes.forEach((box) =>{
     box.addEventListener("click", () =>{
-        console.log ("box was clicked")
      if(turn0)
      {
         box.innerText = "O";
@@ -45,8 +44,7 @@ const enableBoxes=() =>{
 
 const showWinner =(winner) =>{
         msg.innerText = `winner is ${winner}`;
-        disableBoxes();
-       
+        disableBoxes();  
 }
 const checkWinner=()=>{
  for (let pattern of winPatterns){
@@ -58,6 +56,8 @@ const checkWinner=()=>{
         if(pos1Val === pos2Val && pos2Val === pos3Val){
             showWinner(pos1Val);
         }
+          else 
+           msg.innerText = "MATCH IS DRAW";
       }
 } 
 }
